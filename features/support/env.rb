@@ -2,6 +2,7 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'site_prism'
+require_relative '_scenario_variables'
 
 Dir[File.dirname(__FILE__) + '/../site_pages/*.rb'].each do |file|
   require file

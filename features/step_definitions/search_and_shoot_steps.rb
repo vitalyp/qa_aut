@@ -7,7 +7,7 @@ end
 
 When(/^I enter search subject$/) do
   expect(@google).to have_search_field
-  @google.search_field.set "Aikido"
+  @google.search_field.set $SEARCH_TERM
   @google.search_button.click
 end
 
