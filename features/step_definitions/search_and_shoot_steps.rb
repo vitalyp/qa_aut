@@ -1,12 +1,5 @@
-class GoogleSearch < SitePrism::Page
-  set_url 'http://www.google.com'
-
-  element :search_field, "input[name='q']"
-  element :search_button, "button[name='btnG']"
-end
-
 Given(/^I am on google search page$/) do
-  @google = GoogleSearch.new
+  @google = SitePages::GooglePage.new
   @google.load
 end
 

@@ -3,6 +3,10 @@ require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'site_prism'
 
+Dir[File.dirname(__FILE__) + '/../site_pages/*.rb'].each do |file|
+  require file
+end
+
 Capybara.configure do |config|
   config.default_driver = :firefox
   config.javascript_driver = :firefox
